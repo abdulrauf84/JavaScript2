@@ -1,6 +1,6 @@
 body {
-  background-color: rgba(92, 6, 6, 0.438);
-  color: azure;
+  background-color: rgba(91, 107, 84, 0.438);
+  color: rgb(3, 3, 3);
   width: 50%;
   margin: auto;
 }
@@ -15,10 +15,14 @@ li {
   text-align: center;
   text-decoration: none;
   padding: 1em;
+  width: 500px;
 }
 
 li>p {
   font-size: 24px;
   margin: auto 6em auto auto;
   padding: 1em;
+  width: 300px;
+  text-align: left;
+
 }

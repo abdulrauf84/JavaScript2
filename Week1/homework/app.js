@@ -2,11 +2,13 @@
 
 //2.1
 let bookTitles = [
-  'Javascript Essentials',
-  'Nodejs Fundamental',
-  'Reactjs Foundation',
-  'Python For Beginners',
-  'Java 8',
+  'Harry Potter',
+  'The Great Gatsby',
+  'To Kill a Mockingbird',
+  'The Hobbit',
+  'Fahrenheit 451',
+  'The Catcher in the Rye',
+  'Pride and Prejudice',
 ];
 //console.log(bookTitles);
 
@@ -30,7 +32,7 @@ let books = [
     cover_image: 'harrypotter.jpg',
   },
   {
-    book_title: 'The Great Gatsby'',
+    book_title: 'The Great Gatsby',
     author: 'F. Scott Fitzgerald',
     language: 'English',
     cover_image: 'thegreat.jpg',
@@ -48,14 +50,14 @@ let books = [
     cover_image: 'thehobbit.jpg',
   },
   {
-    book_title: 'Fahrenheit 451'
+    book_title: 'Fahrenheit 451',
     author: 'Ray Bradbury',
     language: 'English',
     cover_image: 'fahrenheit.jpg',
   },
   {
     book_title: 'The Catcher in the Rye',
-    author: 'J.D. Salinger,
+    author: 'J.D. Salinger',
     language: 'English',
     cover_image: 'thecatcher.jpg',
   },
@@ -76,7 +78,7 @@ function booksInfo() {
     let img = document.createElement('IMG');
     let p = document.createElement('p');
     img.src = './img/' + book.cover_image;
-    img.setAttribute('width', '350');
+    img.setAttribute('width', '250');
     img.setAttribute('height', '300');
     img.setAttribute('alt', book.book_title);
     li.appendChild(img);
