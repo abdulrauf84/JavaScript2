@@ -11,7 +11,7 @@ li {
   grid-template-rows: auto;
   grid-gap: 3em;
   float: left;
-  border-bottom-style: dotted;
+  border-bottom: 1px solid;
   text-align: center;
   text-decoration: none;
   padding: 1em;
@@ -25,4 +25,9 @@ li>p {
   width: 300px;
   text-align: left;
 
+}
+
+img {
+  width: 150px;
+  height: 200px;
 }

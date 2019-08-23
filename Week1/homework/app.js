@@ -9,17 +9,18 @@ let bookTitles = [
   'The Catcher in the Rye',
   'Pride and Prejudice',
 ];
-//console.log(bookTitles);
 
-// function booksList() {
-//   let ul = document.createElement('ul');
-//   let li = document.createElement('li');
-//   bookTitles.map(book => {
-//     let li = document.createElement('li');
-//     li.appendChild(document.createTextNode(book));
-//     return document.body.appendChild(ul.appendChild(li));
-//   });
-// }
+function booksList() {
+  let ul = document.createElement('ul');
+  let li = document.createElement('li');
+  bookTitles.map(book => {
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(book));
+    return document.body.appendChild(ul.appendChild(li));
+  });
+}
+booksList();
+
 let books = {
   book1: {
     book_title: 'Harry Potter',
@@ -66,14 +67,13 @@ let books = {
   },
 };
 
-// for (let book in books) {
-//   console.log(books[book]['book_title']);
-//   console.log(books[book]['author']);
-//   console.log(books[book]['language']);
-// }
+for (let book in books) {
+  console.log(books[book]['book_title']);
+  console.log(books[book]['author']);
+  console.log(books[book]['language']);
+}
 
-function booksInfo() {
-  let mainDiv = document.getElementById('main');
+function booksDetails() {
   let ul = document.createElement('ul');
 
   for (let book in books) {
@@ -81,8 +81,6 @@ function booksInfo() {
     let img = document.createElement('IMG');
     let p = document.createElement('p');
     img.src = './img/' + books[book]['cover_image'];
-    img.setAttribute('width', '250');
-    img.setAttribute('height', '300');
 
     li.appendChild(img);
     p.innerHTML =
@@ -94,8 +92,10 @@ function booksInfo() {
       '</br>' +
       'Language: ' +
       books[book]['language'];
+
     li.appendChild(p);
-    return mainDiv.append(ul.appendChild(li));
+    ul.appendChild(li);
   }
+  document.body.appendChild(ul);
 }
-booksInfo();
+booksDetails();
