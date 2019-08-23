@@ -1,22 +1,24 @@
 'use strict';
 
 let bookTitles = [
-  'Harry Potter',
-  'The Great Gatsby',
-  'To Kill a Mockingbird',
-  'The Hobbit',
-  'Fahrenheit 451',
-  'The Catcher in the Rye',
-  'Pride and Prejudice',
+  'Harry_Potter',
+  'The Great_Gatsby',
+  'To_Kill_a _Mockingbird',
+  'The_Hobbit',
+  'Fahrenheit_451',
+  'The Catcher_in_the_Rye',
+  'Pride_and_Prejudice',
 ];
 
 function booksList() {
+  let bookList = document.createElement('div');
   let ul = document.createElement('ul');
-  let li = document.createElement('li');
   bookTitles.map(book => {
     let li = document.createElement('li');
-    li.appendChild(document.createTextNode(book));
-    return document.body.appendChild(ul.appendChild(li));
+    let bookNames = book.replace(/_/g, ' ');
+    li.appendChild(document.createTextNode(bookNames));
+    ul.appendChild(li);
+    return document.body.appendChild(bookList.appendChild(ul));
   });
 }
 booksList();
@@ -66,12 +68,6 @@ let books = {
     cover_image: 'pap.jpg',
   },
 };
-
-for (let book in books) {
-  console.log(books[book]['book_title']);
-  console.log(books[book]['author']);
-  console.log(books[book]['language']);
-}
 
 function booksDetails() {
   let ul = document.createElement('ul');
