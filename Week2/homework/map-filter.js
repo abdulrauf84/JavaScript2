@@ -2,11 +2,12 @@
 
 function doubleOddNumbers(numbers) {
   // Replace this comment and the next line with your code
-  let newNumbers = [];
+  const newNumbers = [];
   numbers.map(odd => {
     if (odd % 2 !== 0) {
       newNumbers.push(odd * 2);
     }
+    return null;
   });
   return newNumbers;
 }
