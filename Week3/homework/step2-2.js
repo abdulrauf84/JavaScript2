@@ -3,18 +3,26 @@
 function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   const numbers = [];
 
-  // Replace this comment and the next line with your code
-  console.log(startIndex, stopIndex, threeCallback, fiveCallback, numbers);
+  for (let i = startIndex; i < stopIndex + 1; i++) {
+    numbers.push(i);
+  }
+  numbers.map(function(number) {
+    if (number % 3 === 0) {
+      threeCallback(number);
+    }
+    if (number % 5 === 0) {
+      fiveCallback(number);
+    }
+    return null;
+  });
 }
 
 function sayThree(number) {
-  // Replace this comment and the next line with your code
-  console.log(number);
+  console.log(number + ' is divisble by 3');
 }
 
 function sayFive(number) {
-  // Replace this comment and the next line with your code
-  console.log(number);
+  console.log(number + ' is is divisble by 5');
 }
 
 threeFive(10, 15, sayThree, sayFive);
