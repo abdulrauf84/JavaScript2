@@ -58,11 +58,11 @@ const twoHoursTasks = durationInHours.filter(task => task >= 2);
 
 console.log(twoHoursTasks);
 
-const multiplyDurationWithPerHour = twoHoursTasks.map(hour => hour * maartjesHourlyRate);
+const multiplyDurationWithHours = twoHoursTasks.map(hour => hour * maartjesHourlyRate);
 
-const computeEarnings = () => multiplyDurationWithPerHour.reduce((a, b) => a + b, 0);
+const computeEarnings = () => multiplyDurationWithHours.reduce((a, b) => a + b);
 
-console.log(`Maartje has earned €${computeEarnings()}`);
+console.log(`Maartje has earned €${computeEarnings().toFixed(2)}`);
 
 // // Do not change or remove anything below this line
 module.exports = {
